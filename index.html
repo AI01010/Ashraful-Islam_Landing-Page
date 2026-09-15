@@ -306,6 +306,53 @@
       color: var(--accent-cyan);
     }
     
+    /* Research cards */
+    .research-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .research-links {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .research-link {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .research-link:hover {
+      color: var(--accent-cyan);
+      transform: translateY(-2px);
+    }
+
+    .research-venue {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .research-authors {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .research-authors strong {
+      color: var(--text-primary);
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .experience-card .tech-stack {
+      margin-top: 1.25rem;
+    }
+
     /* About Section */
     .about-content {
       max-width: 820px;
@@ -630,7 +677,7 @@
           <strong>innovative IT solutions</strong> to benefit communities and advance public
           well-being.
         </p>
-        <p>Check out my experience and projects below.</p>
+        <p>Check out my experience, projects, and research below.</p>
       </div>
     </div>
   </section>
@@ -846,13 +893,13 @@
         <div class="section-label">Featured Work</div>
         <h2 class="section-title">Projects</h2>
         <p class="section-description">
-          Across AI / ML systems, full-stack web apps, big-data pipelines, and research &mdash; spanning hackathon wins, client work, coursework, and personal explorations.
+          Across AI / ML systems, full-stack web apps, and big-data pipelines &mdash; spanning hackathon wins, client work, coursework, and personal explorations.
         </p>
       </div>
       
       <!-- AI / ML / Research Subsection -->
       <div class="projects-subsection">
-        <h3 class="subsection-title">AI / ML &amp; Research</h3>
+        <h3 class="subsection-title">AI / ML</h3>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-header">
@@ -917,27 +964,6 @@
               <span class="tech-tag">React + Vite</span>
               <span class="tech-tag">MongoDB Atlas</span>
               <span class="tech-tag">Cloud Run</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-brain project-icon"></i>
-              <div class="project-links">
-                <a href="https://github.com/AI01010/FoV_ML_spatial_audio_prediction" class="project-link" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <h3 class="project-title">360&deg; VR Attention ML FoV Prediction System</h3>
-            <p class="project-description">
-              Designed and trained a CNN-based classification model on a 144-class output space to predict user head orientation and reduce theoretical VR streaming bandwidth through data-driven field-of-view prediction. Engineered a large-scale data pipeline processing 40B+ spatiotemporal samples for model training and validation. Evaluated on top-1 metrics, achieving 50.6% validation accuracy and 31% on real unseen data.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-tag">PyTorch</span>
-              <span class="tech-tag">CNN</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">ML Research</span>
             </div>
           </div>
 
@@ -1233,6 +1259,94 @@
           </div>
         </div>
       </div> -->
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Publications &amp; Research</div>
+        <h2 class="section-title">Research</h2>
+        <p class="section-description">
+          Formal methods for safety-critical avionics and applied ML for immersive media.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-title">Formal Verification in Integrated Avionics Systems &mdash; AerosCASP</h3>
+              <p class="research-venue">AIAA Region IV Student Conference · The University of Texas at Dallas · Mar 27&ndash;29, 2026</p>
+              <p class="research-authors">William T. Doan, <strong>Ashraful Islam</strong>, Viknesh Venkatachalam, Mahd Malik</p>
+            </div>
+            <div class="research-meta">
+              <span class="experience-date">Jan 2026 – Mar 2026</span>
+              <div class="research-links">
+                <a href="https://wtd-1.github.io/web/Formal%20Verification%20in%20Integrated%20Avionics%20Systems.pptx-2.pdf" class="research-link" target="_blank" rel="noopener" aria-label="Paper PDF" title="Paper (PDF)">
+                  <i class="fas fa-file-pdf"></i>
+                </a>
+                <a href="https://docs.google.com/presentation/d/1p0hIEHq0fEnKnv8ohyLLF8RnlnaFlA9E/edit?usp=sharing" class="research-link" target="_blank" rel="noopener" aria-label="Conference slides" title="Conference slides">
+                  <i class="fas fa-chalkboard"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-description">
+            <ul>
+              <li>Co-authored an AIAA Region IV Student Conference paper proposing a &ldquo;Correctness by Construction&rdquo; framework that shifts DO-178C avionics verification from post-implementation testing to formal proof during the requirements phase of the V-Model</li>
+              <li>Modeled continuous flight dynamics (Minimum Safe Altitude / GPWS logic) in s(CASP) with CLP(Q) rational constraints, mathematically proving safety properties over infinite state spaces without finite grounding</li>
+              <li>Automated the Requirements Traceability Matrix (RTM) via s(CASP) justification trees and <code>#pred</code> natural-language directives, and used Dynamic Consistency Checking (DCC) to prune ARINC 653 IMA scheduling search spaces during model generation</li>
+              <li>Built AerosCASP, the working implementation of the published framework, encoding the paper's avionics models and proofs as executable s(CASP) programs</li>
+            </ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">s(CASP)</span>
+            <span class="tech-tag">Answer Set Programming</span>
+            <span class="tech-tag">CLP(Q)</span>
+            <span class="tech-tag">Prolog</span>
+            <span class="tech-tag">DO-178C</span>
+            <span class="tech-tag">ARINC 653</span>
+            <span class="tech-tag">LaTeX</span>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-title">360&deg; VR Attention ML FoV Prediction System</h3>
+              <p class="research-venue">Undergraduate ML research · The University of Texas at Dallas</p>
+            </div>
+            <div class="research-meta">
+              <span class="experience-date">Aug 2025 – Dec 2025</span>
+              <div class="research-links">
+                <a href="https://github.com/AI01010/FoV_ML_spatial_audio_prediction" class="research-link" target="_blank" rel="noopener" aria-label="GitHub repository" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://docs.google.com/presentation/d/1F2gk7uJgkCZhI7u78pOk73g9jufKvCC5D2GukEbCdKY/edit?usp=sharing" class="research-link" target="_blank" rel="noopener" aria-label="Research presentation" title="Research presentation">
+                  <i class="fas fa-chalkboard"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-description">
+            <ul>
+              <li>Designed and trained a CNN-based classification model on a 144-class output space to predict user head orientation and reduce theoretical VR streaming bandwidth through data-driven field-of-view prediction</li>
+              <li>Fused visual, motion, and audio saliency heatmaps from equirectangular projections into per-frame FoV predictions, selecting a tiled subregion to stream</li>
+              <li>Engineered a large-scale data pipeline processing 40B+ spatiotemporal samples for model training and validation</li>
+              <li>Evaluated performance on top-1 metrics, achieving 50.6% validation accuracy and 31% on real unseen data</li>
+            </ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Saliency Fusion</span>
+            <span class="tech-tag">ML Research</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
